@@ -1,0 +1,337 @@
+%-------------------------
+% Entry-level Resume in LaTeX
+% Last Edits - July 19, 2021
+% Author : Jayesh Sanwal
+% Reach out to me on LinkedIn(/in/jsanwal), with any suggestions, ideas, etc.
+%------------------------
+
+%%-------------------------------------
+% Author Notes here -
+% 1) Change " Author+an = {N=highlight}" in "Publications.bib", where N is the number at which your name appears
+% 2) Use "\vspace" wisely, that would change spacing, and is currently being used as a hacky fix
+% 3) Do not delete the fonts in the left side
+% 4) Use the "Rich Text" feature on Overleaf - On the top panel next to source. Makes it much easier for starters on LaTeX to use this template
+% 5) Do NOT use periods at the end of bullet points, the sample (ipsum) text might have it
+% 6) Use "maxbibnames" on this file to change the maximum number of authors on the paper (Credits: Dr. Natasha Krell) - Default is 3, but change line 92 to add authors
+
+%%-------------------------------------
+% Changes from last version -
+% 1) Removed areas of Expertise as a separate section - integrated into the summary section
+% 2) Changed Focus to Academic Projects instead of Education
+% 3) Made the integrated summary 3 lines over 1
+% 4) Changed spacing between sections and bullets
+% 5) Changed the number of authors to be user customized
+
+%%-------------------------------------
+% Changes to be made here -
+% 1) Shift to Class file, make changes here
+% 2) Use a fonts folder
+% 3) Incorporate Leadership & volunteering together
+% 4) Remove \vspace based 'hacky' fixes
+%%-------------------------------------
+
+
+\documentclass[a4,10pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+%%%% Set Margins
+\usepackage[margin=1cm, top=1cm]{geometry}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=SourceSansPro-Semibold.otf, %SourceSansPro-Bold.otf
+ItalicFont=SourceSansPro-RegularIt.otf
+]{SourceSansPro-Regular.otf}
+\setsansfont{SourceSansPro-Semibold.otf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{32, 64, 151}
+%\definecolor{UI_pink}{rgb}{1.0, 0.01, 0.24}
+%definecolor{UI_pink}{rgb}{0.96, 0.76, 0.76}
+
+%%%% Define New Commands
+\usepackage[style=nature, maxbibnames=3]{biblatex}
+\addbibresource{Publications.bib}
+
+%%%% Bold Name in Publications
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+\color{UI_blue} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+% \newcommand{\subtextit}[1]{\vspace{0.15cm}
+% \textit{ #1 \vspace{-0.2cm}} }
+
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.24\textwidth}
+           
+            \large (+91)-9108569131 \\
+            \large \href{mailto:karthikrjss@gmail.com}{karthikrjss@gmail.com} 
+           % \large Bangalore, Karnataka \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.5\textwidth}
+            \centering
+            {\HUGE Karthik Raj S S} \\ %
+            \vspace{0.1cm}
+           % {\color{UI_blue} \Large{Target Job}} \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.24\textwidth}
+            
+            \flushright \large  %Willing to Relocate
+            \href{https://www.linkedin.com/in/karthik-raj-s-s-9669a9165}
+            {\color{UI_blue}\emph{linkedin.com/Karthikraj}}\\
+            \href{https://github.com/ssk-98}{\color{UI_blue}\emph{github.com/ssk-98}}
+         
+    \end{minipage}   
+    
+\vspace{-0.15cm} 
+{\color{UI_blue} \hrulefill}
+\end{center}
+\vspace{-0.2cm}
+B.E, Electronics and Communication Engineering graduate with keen interest to be associated with an organisation that would provide an opportunity to work with a team that strives to grow with the organisation\vspace{-0.2cm}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  EDUCATION
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Education }
+\subsection*{B.E, Electronics and Communication Engineering, {\normalsize \normalfont BMS College of Engineering, CGPA: 9.01/10.00} \hfill Aug 2016 --- Sep 2020} 
+\vspace{0.1cm}
+\subsection*{12th Standard, {\normalsize \normalfont St Josephs's Pre-University College, 92.5\%} \hfill May 2015 --- Mar 2016}
+\vspace{0.1cm}
+\subsection*{10th Standard, {\normalsize \normalfont St Josephs's Indian High School, 96\%} \hfill Jun 2013 --- Apr 2014} 
+\vspace{0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  ACADEMIC PROJECTS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Projects} %% (Or "Research", select as appropriate)
+
+%%% ----- Best way to write items (Credit - FAANGPath)
+        % \item Achieved X\% growth for XYZ using A, B, and C skills.
+        % \item Led XYZ which led to X\% of improvement in ABC
+        % \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+
+
+%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
+\subsection*{Deep Learning and Cloud Based Driver Monitoring System \hfill Jan 2020 --- June 2020} 
+    \begin{zitemize}
+        \item Designed a system to continously monitor driver to detect passive driver violations based on image classification 
+        \item Data such as type of violation, snapshot, GPS co-ordinates etc would be uploaded to cloud storage
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 2 ----------------------------------- %%%%%%%
+\subsection*{Bomb Defusing Robot \hfill Aug 2019 --- Dec 2019} 
+    \begin{zitemize}
+        \item Designed a semi autonomous robot with Node MCU and RPi 3 controllers for safe defusing of explosives. Can be operated at a safe range with live video feed for the person controlling the bot
+        \item Fitted with an arm to cut wires in explosives, it can be remotely operated used android phones
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 3 ----------------------------------- %%%%%%%
+\subsection*{Ant Bot \hfill Nov 2018 --- Mar 2019} 
+    \begin{zitemize}
+        \item Implemented as a part of E-Yantra - a national level robotics competition. Basically a system for carrying Cargo to the destination based on colour coding of the cargo
+        \item Worked extensively on Image processing and locomotion of the system. Analogy is drawn between ant as a bot, ant food as cargo and godown as ant hill, hence the name Ant Bot 
+    \end{zitemize}
+    
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Obstacle Detection System \hfill Jan 2018 --- Apr 2019} 
+    \begin{zitemize}
+        \item The system was implemented on Arduino UNO controller, it was able to detect, measure distance and the angle at which the object was detected
+        \item The presence of obstacles and the related parameters can be continously displayed on a PC with simple GUI
+    \end{zitemize}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  WORK EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Experience}
+
+%%% ----- Best way to write items (Credit - ResumePuppy.com)
+        % \item Developed AngularJS microservice to automate parsing of ~300 emails/day for efficient service request categorization using Linux MBox & Perl scripts; reduced manual re-allocation by 87%.
+        % \item Led the development, build and bring-up execution of Lyft’s first functional AV platform from start to finish; established fleet-grade product reliability over 5 months.
+        % \item Enhanced user experience by fine-tuning stored procedures & SQL queries for efficient data retrieval from ~4M records accessed by 5000+ users worldwide.
+        % \item Built a custom menu single handedly using HTML5, CSS3, XML and JSP and improved the performance of existing application by tuning the PL/SQL scripts by 20\% and reduced on-migration time.
+        
+
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Software Test Engineer \hfill Jan 2021 --- Present} 
+\subtext{Robert Bosch Engineering and Business Solutions \hfill Bangalore} 
+    \begin{zitemize}
+        \item Airbag Embedded Software Validation Engineer, primarily working on Drive Data Recorder and Diagnostic features 
+        \item Responsible for Test Specification, Test Automation Script Development for Hardware in Loop (HiL) validation using Perl Framework.
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
+\subsection*{Intern \hfill Jan 2020 --- May 2020} 
+\subtext{Robert Bosch Engineering and Business Solutions \hfill Bangalore} 
+    \begin{zitemize}
+        \item Designed Automation Tools for Signal Visualisation and Test status updation using python for Vehicle Motion Control Team 
+        \item Contributed in Vehicle Motion Control Software Validation using Matlab and Simulink
+    \end{zitemize}
+    
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+\subsection*{Intern \hfill Jul 2019 --- Aug 2019} 
+\subtext{Verikwest Systems  \hfill Bangalore} 
+    \begin{zitemize}
+        \item Worked on developing VIP for low power interface module in AMBA for ARM processor
+        \item Designed Tests to verify the functionality of the module
+        
+    \end{zitemize}
+
+
+
+
+
+%%%%%%%  SKILLS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabular}{p{11em} p{1em} p{43em}}
+\hskills{Programming/Scripting }&  &  C, C++, Python, Perl, Verilog, System Verilog \\
+\hskills{Tools/Libraries} &  & Matlab \& Simulink, Vivado, NC Verilog, CANoe, Open CV, Keras \\
+\hskills{Protocols} &  & SPI, I2C, UART, CAN \\
+\end{tabular}
+\vspace{-0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  VOLUNTEER EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+% \section{Volunteer (or LEADERSHIP) Experience}
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  PUBLICATIONS
+%%%%%%% --------------------------------------------------------------------------------------
+%\section{Publications} 
+%\renewcommand\refname{\vskip -1.5em}
+%\nocite{*}
+%\printbibliography[heading=none]
+%\vspace{-0.4cm}
+
+%%%%%%%  Achievements
+%%%%%%% --------------------------------------------------------------------------------------
+
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  AWARDS & HONORS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Achievements}
+\vspace{-0.2cm}
+\begin{tabular}[t]{ p{4em} p{50em}}
+\hskills{2020} & Published a paper on Deep Learning and Cloud based Driver Monitoring System in International Journal of Advanced research in Electrical, Electronics and Instrumentation Engineering \\
+\hskills{2019} & Pre-finalist Eyantra 2018 edition \\
+\hskills{2018} & Bronze Certificate in India Innovation Challenge Design Contest by Texas Instruments \\
+\hskills{2018} & Organising Committee member of ELSOC (Electronics Student Body Association) \\
+\hskills{2018} & Event Co – coordinator at Phase shift ( Annual Tech fest) \\
+\end{tabular} 
+
+%%%%%%% ---------------------------- END DOC HERE ---------------------------- %%%%%%% 
+\end{document}
